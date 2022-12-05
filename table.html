@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    caption{
+        font-weight: bold;
+    }
+    table{
+        border: 2px solid rgb(222, 126, 126);
+        border-collapse: collapse;
+    }
+    thead{
+        background-color:lightpink;
+    }
+    th,td{
+        border: 1px solid rgb(222, 126, 126);
+        text-align: center;
+    }
+    thead > tr{
+        background-color:rgb(221, 108, 125);
+    }
+    tbody > tr{
+        background-color:rgb(255, 221, 226);
+    }
+    tbody > tr:nth-child(2n+1){
+        background-color:rgb(255, 194, 203);
+    }
+    tbody > tr:nth-child(2n){
+        background-color:rgb(255, 237, 243);
+    }
+    tbody > tr:hover{
+        background-color:rgb(207, 140, 150);
+    }
+</style>
+<body>
+    <table>
+        <caption>表格練習</caption>
+        <thead>
+            <tr>
+                <th colspan="2">標題1</th>
+                <!-- <th>標題2</th> -->
+                <th>標題3</th>
+                <th rowspan="2">標題4</th>
+            </tr>
+            <tr>
+                <th>子標題1</th>
+                <th>子標題2</th>
+                <th>子標題3</th>
+                <!-- <th>子標題4</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>儲存格1</td>
+                <td>儲存格2</td>
+                <td>儲存格3</td>
+                <td>儲存格4</td>
+            </tr>
+            <tr>
+                <td>儲存格5</td>
+                <td>儲存格6</td>
+                <td colspan="2" rowspan="2">儲存格7</td>
+                <!-- <td>儲存格8</td> -->
+            </tr>
+            <tr>
+                <td>儲存格9</td>
+                <td>儲存格10</td>
+                <!-- <td>儲存格11</td> -->
+                <!-- <td>儲存格12</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

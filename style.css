@@ -1,0 +1,45 @@
+span.sp1{
+    color: darkgreen;
+    font-size: large;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'cursive';
+    src: url(fonts/Cursive_Script.ttf);
+}
+.p1{
+    font-family: '新細明體';
+    text-decoration-line: line-through;
+    text-decoration-style: wavy;
+    text-decoration-color: brown;
+}
+.p2{
+    font-family: 'cursive';
+    text-decoration: underline wavy coral;
+}
+.p3{
+    font-family: 'Noto Serif TC', serif;
+    
+}
+.p4{
+    font-family: 'Kenia', '微軟正黑體';
+}
+.p5{
+    font-family: 'Rubik Distressed', 'cursive';
+}
+.fontweight{
+    font-weight: 500;
+}
+p{
+    color: darkcyan;
+}
+#id{
+    color: darkslateblue;
+    font-weight: 800;
+}
+.id1{
+    color: darkblue;
+}
+*{
+    color: coral;
+}

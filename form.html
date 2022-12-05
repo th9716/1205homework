@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .q1 {
+      width: 450px;
+      border-bottom: 2px dashed gray;
+      margin: 20px;
+      padding-bottom: 20px;
+    }
+    
+    .t1 {
+      float: left;
+      width: 100px;
+      text-align: right;
+    }
+    .btn1 {
+      width: 450px;
+      border-bottom: 2px dashed gray;
+      margin: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+      border: 0;
+    }
+    fieldset{
+        border-color: lightblue;
+    }
+    legend{
+        padding: 5px 15px;
+        margin-left: 10px;
+        color: rgb(95, 133, 146);
+        font-weight: bold;
+    }
+    select{
+        margin-left: 10px;
+    }
+  </style>
+
+  <body>
+    <form action="#" method="get" enctype="multipart/form-data">
+      <fieldset>
+        <legend>基本資料</legend>
+        <div class="q1">
+          <label for="name">姓名:</label>
+          <input
+            type="text"
+            id="name"
+            name="username"
+            value=""
+            placeholder="輸入姓名"
+            autocomplete="on"
+            autofocus
+            size="10"
+          />
+        </div>
+        <div class="q1">
+          <label for="password">密碼:</label>
+          <input
+            type="password"
+            id="password"
+            name="userpassword"
+            value=""
+            placeholder="輸入密碼"
+          />
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>基本資料2</legend>
+        <div class="q1">
+          <label for="txt">備註:</label>
+          <textarea id="txt" name="content" cols="20" rows="10"></textarea>
+        </div>
+        <div class="q1">
+          <span class="t1">性別:</span>
+          <label><input type="radio" name="gender" value="male" />男</label>
+          <label><input type="radio" name="gender" value="female" />女</label>
+        </div>
+        <div class="q1">
+          <span class="t1">興趣:</span>
+          <label
+            ><input type="checkbox" name="hobby" value="music" />音樂</label
+          >
+          <label
+            ><input type="checkbox" name="hobby" value="sport" />運動</label
+          >
+          <label><input type="checkbox" name="hobby" value="read" />閱讀</label>
+          <label
+            ><input type="checkbox" name="hobby" value="movie" />電影</label
+          >
+        </div>
+        <div class="q1">
+          <span class="t1">縣市:</span>
+          <select name="city" id="">
+            <option value="tpe">台北市</option>
+            <option value="ntp">新北市</option>
+            <option value="ty">桃園市</option>
+          </select>
+        </div>
+        <div class="q1">
+          <label for="" class="t1">上傳檔案</label>
+          <input type="file" name="file1" />
+        </div>
+        <div class="btn1">
+          <input type="submit" value="送出" />
+          <input type="reset" />
+        </div>
+        
+      </fieldset>
+      <fieldset>
+        <legend>基本資料3</legend>
+        <div class="q1">
+            <label for="color" class="t1">顏色</label>
+            <input type="color" id="color" name="color" value="#D3CCC7"><br>
+            <label for="range" class="t1">控制條</label>
+            <input type="range" id="range" name="range" min="0" max="100" value="50" step="10" >
+            <span id="rangeOutput"></span><br>
+            <label for="number" class="t1">數值</label>
+            <input type="number" id="number" name="number" min="0" max="10" value="5">
+        </div>
+        <div class="q1">
+            <input type="date" id="time" name="time" value="2022-12-05" min="2022-12-01" max="2022-12-10"><br>
+            <input type="datetime-local" id="time" name="time" value="2022-12-05"><br>
+            <input type="month" id="time" name="time" value="2022-12-05"><br>
+            <input type="time" id="time" name="time" value="2022-12-05"><br>
+            <input type="week" id="time" name="time" value="2022-12-05"><br>
+        </div>
+
+      </fieldset>
+    </form>
+  </body>
+  <script>
+    range.addEventListener('input',()=>{
+        rangeOutput.innerText=range.value;
+    })
+  </script>
+</html>

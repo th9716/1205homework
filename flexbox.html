@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      width: 1920px;
+    }
+    .nav {
+      margin: 0 375px;
+
+      box-sizing: border-box;
+    }
+    .flexbox1 {
+      margin: 24.5px 0;
+      width: 1170px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .image img {
+      height: 50px;
+      margin: center;
+      padding-left: 20px;
+    }
+    .con ul {
+      display: flex;
+    }
+    .con li {
+      list-style: none;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 10px;
+      padding-right: 20px;
+      border-right: 1px solid gray;
+    }
+    .con li:last-child {
+      border: none;
+    }
+    .acc ul {
+      display: flex;
+    }
+    .acc li {
+      font-size: 1em;
+      font-weight: 600;
+      list-style: none;
+      padding-right: 20px;
+    }
+    /*  ------------------------------   */
+    .flexbox2 {
+      width: 1920px;
+      display: flex;
+    }
+    .banner {
+      width: 1180px;
+      min-height: 200px;
+      height: 200px;
+      margin: 0px -100px;
+    }
+    .right {
+      z-index: 1;
+    }
+    .left {
+      z-index: 1;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div class="flexbox1">
+          <div class="image">
+            <img src="images/Logo3.png" />
+          </div>
+
+          <div class="con">
+            <ul>
+              <li>關於我們</li>
+              <li>消息公告</li>
+              <li>營隊總覽</li>
+              <li>教室據點</li>
+            </ul>
+          </div>
+          <div class="acc">
+            <ul>
+              <li>帳戶入口</li>
+              <li>搜尋</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="flexbox2">
+        <img class="right" src="images/bannerRight.png" />
+        <img class="banner" src="images/serviceLocationBG.png" />
+        <img class="left" src="images/bannerLeft.png" />
+      </div>
+    </div>
+  </body>
+</html>
