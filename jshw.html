@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    fieldset {
+      border-color: lightblue;
+      border-radius: 20px;
+      border-width: 5px;
+      width: 80%;
+      margin: 0 10%;
+    }
+    legend {
+      padding: 5px 15px;
+      margin-left: 10px;
+      color: rgb(95, 133, 146);
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .q1 {
+      width: 90%;
+      border-bottom: 2px dashed gray;
+      margin: 20px;
+      padding-bottom: 20px;
+    }
+    .q1 label,
+    input,
+    span {
+      margin: 10px 1px;
+    }
+  </style>
+  <body>
+    <form action="#" method="get" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Form Check</legend>
+
+        <div class="q1">
+          <label>姓名:</label>
+          <input
+            type="text"
+            id="idNam"
+            size="20"
+            value="王a建民"
+          /><!-- 瀏覽器執行到此標籤會建立一個物件-->
+          <span id="idsp"></span><br />
+          <label>(1.不可空白2.至少兩個字以上3.必須全部為中文字)</label><br />
+          <input type="button" id="idbut" value="check" onclick="checkNam();" />
+        </div>
+
+        <div class="q1">
+          <label>密碼:</label>
+          <input
+            type="text"
+            id="idPwd"
+            size="20"
+            value="123456"
+          /><!-- 瀏覽器執行到此標籤會建立一個物件-->
+          <span id="idsp1"></span><br />
+          <label
+            >(1.不可空白2.至少6個字且必須包含英數字、特殊字元[!@#$%^&*])</label
+          ><br />
+          <input
+            type="button"
+            id="idbut1"
+            value="check"
+            onclick="checkPwd();"
+          />
+        </div>
+
+        <div class="q1">
+          <label>日期:</label>
+          <input
+            type="text"
+            id="idDate"
+            size="20"
+            value="2021/2/29"
+          /><!-- 瀏覽器執行到此標籤會建立一個物件-->
+          <span id="idsp2"></span><br />
+          <label>格式:西元年/月/日(yyyy/mm/dd)</label><br />
+          <input
+            type="button"
+            id="idbut2"
+            value="check"
+            onclick="checkDat();"
+          />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+  <script>
+    function checkNam(){
+           //取得idPwd元素
+           let thePwdobj = document.getElementById("idPwd");
+           console.log(thePwdobj);
+           //取得idPwd元素值
+           let thePwdobjVal = thePwdobj.value;
+           console.log(thePwdobjVal);
+
+           //判斷元素值是否為空白，密碼長度是否大於6
+           //如果長度是否大於6，判斷是否包含字母、數字、特殊符號
+           let sp = document.getElementById("idsp1");
+           let thePwdLen = thePwdobjVal.length;
+           let flag1 = false, flag2 = false;
+           if (thePwdobjVal == "") {
+               sp.innerHTML = "You must enter";
+           }
+
+           else if (thePwdLen >= 6) {
+               //sp.innerHTML = ">=6";
+               for (let i = 0; i < thePwdLen; i++) {
+                   ch = thePwdobjVal.charAt(i).toUpperCase();
+                   if (ch >= "A" && ch <= "Z") {
+                       flag1 = true;
+                   }
+                   else if (ch >= "0" && ch <= "9") {
+                       flag2 = true;
+                   }
+                   if (flag1 && flag2) break;
+               }
+               if (flag1 && flag2) {
+                   sp.innerHTML = "correct";
+               }
+               else {
+                   sp.innerHTML = "incorrect";
+               }
+
+           }
+           else {
+               sp.innerHTML = "Password length must be greater than 6";
+           }
+
+       }
+
+    function checkPwd(){
+           //取得idPwd元素
+           let thePwdobj = document.getElementById("idPwd");
+           console.log(thePwdobj);
+           //取得idPwd元素值
+           let thePwdobjVal = thePwdobj.value;
+           console.log(thePwdobjVal);
+
+           //判斷元素值是否為空白，密碼長度是否大於6
+           //如果長度是否大於6，判斷是否包含字母、數字、特殊符號
+           let sp = document.getElementById("idsp1");
+           let thePwdLen = thePwdobjVal.length;
+           let flag1 = false, flag2 = false;
+           if (thePwdobjVal == "") {
+               sp.innerHTML = "You must enter";
+           }
+
+           else if (thePwdLen >= 6) {
+               //sp.innerHTML = ">=6";
+               for (let i = 0; i < thePwdLen; i++) {
+                   ch = thePwdobjVal.charAt(i).toUpperCase();
+                   if (ch >= "A" && ch <= "Z") {
+                       flag1 = true;
+                   }
+                   else if (ch >= "0" && ch <= "9") {
+                       flag2 = true;
+                   }
+                   if (flag1 && flag2) break;
+               }
+               if (flag1 && flag2) {
+                   sp.innerHTML = "correct";
+               }
+               else {
+                   sp.innerHTML = "incorrect";
+               }
+
+           }
+           else {
+               sp.innerHTML = "Password length must be greater than 6";
+           }
+
+       }
+
+       function checkDat(){
+           //取得idPwd元素
+           let thePwdobj = document.getElementById("idPwd");
+           console.log(thePwdobj);
+           //取得idPwd元素值
+           let thePwdobjVal = thePwdobj.value;
+           console.log(thePwdobjVal);
+
+           //判斷元素值是否為空白，密碼長度是否大於6
+           //如果長度是否大於6，判斷是否包含字母、數字、特殊符號
+           let sp = document.getElementById("idsp1");
+           let thePwdLen = thePwdobjVal.length;
+           let flag1 = false, flag2 = false;
+           if (thePwdobjVal == "") {
+               sp.innerHTML = "You must enter";
+           }
+
+           else if (thePwdLen >= 6) {
+               //sp.innerHTML = ">=6";
+               for (let i = 0; i < thePwdLen; i++) {
+                   ch = thePwdobjVal.charAt(i).toUpperCase();
+                   if (ch >= "A" && ch <= "Z") {
+                       flag1 = true;
+                   }
+                   else if (ch >= "0" && ch <= "9") {
+                       flag2 = true;
+                   }
+                   if (flag1 && flag2) break;
+               }
+               if (flag1 && flag2) {
+                   sp.innerHTML = "correct";
+               }
+               else {
+                   sp.innerHTML = "incorrect";
+               }
+
+           }
+           else {
+               sp.innerHTML = "Password length must be greater than 6";
+           }
+
+       }
+    
+  </script>
+</html>
